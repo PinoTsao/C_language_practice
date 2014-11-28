@@ -1,3 +1,8 @@
+/*
+* pino tsao(pino.cao1984@gmail.com) create this file, at 2014/12
+* This single link operation is for interview practice.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
