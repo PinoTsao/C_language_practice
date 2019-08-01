@@ -1,30 +1,22 @@
 /* Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144...
- * F(n) = F(n - 2) + F(n - 1)*/
+ * f(n) = f(n-2) + f(n-1) */
 
 #include <stdio.h>
 
-int fi(int x) 
+unsigned int fi(unsigned int n)
 {
-    static ret = 0; 
-
-    if (x <= 0) 
-    {  
-        return 0; 
-    }  
-    else if (x == 1) 
-    {  
-        return 1; 
-    }  
-
-    ret = fi(x - 2) + fi(x -1 ); 
-
-    return ret;
+    if (n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else
+        return fi(n-2) + fi(n-1);
 }
 
 int main()
 {
-    int result = 0; 
+    unsigned int n = 10; 
 
-    result = fi(8);
-    printf("result = %d\n", result);
+    printf("sum of fibonacci = %d\n", fi(n));
+    return 0;
 }
